@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Screenshot:
 <p align="center">
-  <img src="https://photos.app.goo.gl/J6VVqFE93qYtsFAy6">
+  <img src="https://i.imgur.com/1xqf9WK.png">
 </p>
 
 ## Development server
