@@ -14,6 +14,8 @@ import { ChartComponent } from './dashboard/chart/chart.component';
 import {MatTableModule} from '@angular/material/table';
 import {HttpClientModule} from '@angular/common/http';
 import {ServerService} from './shared/server.service';
+import { OrdersComponent } from './orders/orders.component';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {ServerService} from './shared/server.service';
     NavComponent,
     DashboardComponent,
     TableComponent,
-    ChartComponent
+    ChartComponent,
+    OrdersComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<div style="display: block;" *ngIf="this.server.dataReady">
+<div style="display: block;" *ngIf="this.server.chartData.length>1">
   <canvas baseChart width="1000" height="400"
           [datasets]="this.server.chartData"
           [labels]="lineChartLabels"
