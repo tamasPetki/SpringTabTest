@@ -3,20 +3,19 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar class="mt-3"><img src="/assets/images/spring-tab-logo.png"></mat-toolbar>
     <mat-nav-list>
-      <hr>
       <h2 matSubheader>Main menu</h2>
-      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon">dashboard</mat-icon>Dashboard</a>
-      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Orders</a>
-      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Customers</a>
-      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Reports</a>
-      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Integrations</a>
+      <a mat-list-item routerLink="dashboard" routerLinkActive="active"><mat-icon matListIcon class="app-nav-list-icon mr-1">dashboard</mat-icon>Dashboard</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">shopping_cart</mat-icon>Orders</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">people</mat-icon>Customers</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">equalizer</mat-icon>Reports</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">layers</mat-icon>Integrations</a>
       <hr>
       <h2 matSubheader>Saved reports</h2>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">assignment</mat-icon>Current month</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">assignment</mat-icon>Last quarter</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon mr-1">assignment</mat-icon>Year-end sale</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -30,6 +29,6 @@
       </button>
       <span>SpringTabTest</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
