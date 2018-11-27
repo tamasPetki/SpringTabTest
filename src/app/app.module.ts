@@ -9,12 +9,19 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {ChartsModule} from 'ng2-charts';
+import { TableComponent } from './dashboard/table/table.component';
+import { ChartComponent } from './dashboard/chart/chart.component';
+import {MatTableModule} from '@angular/material/table';
+import {HttpClientModule} from '@angular/common/http';
+import {ServerService} from './shared/server.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    DashboardComponent
+    DashboardComponent,
+    TableComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +33,11 @@ import {ChartsModule} from 'ng2-charts';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    ChartsModule
+    ChartsModule,
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
