@@ -5,6 +5,15 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <hr>
+      <h2 matSubheader>Main menu</h2>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon">dashboard</mat-icon>Dashboard</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Orders</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Customers</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Reports</a>
+      <a mat-list-item href="#"><mat-icon matListIcon class="app-nav-list-icon"></mat-icon>Integrations</a>
+      <hr>
+      <h2 matSubheader>Saved reports</h2>
       <a mat-list-item href="#">Link 1</a>
       <a mat-list-item href="#">Link 2</a>
       <a mat-list-item href="#">Link 3</a>
@@ -16,8 +25,7 @@
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>SpringTabTest</span>
